@@ -8,49 +8,54 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#080B14',
-        sidebar: '#0D1220',
-        card: {
-          DEFAULT: '#121A2B',
-          hover: '#182238',
-          border: 'rgba(255, 255, 255, 0.08)'
+        bg: {
+          DEFAULT: '#090909',
+          sidebar: '#0D0D0D',
+          card: '#141414',
+          surface: '#1A1A1A',
+          hover: '#202020',
         },
-        primary: {
-          DEFAULT: '#7C5CFC',
-          hover: '#6845EE',
-          light: '#9B82FD',
-          glow: 'rgba(124, 92, 252, 0.25)'
+        border: {
+          DEFAULT: '#262626',
+          subtle: '#1F1F1F',
+          strong: '#383838',
         },
         accent: {
-          DEFAULT: '#22D3EE',
-          hover: '#06B6D4',
-          glow: 'rgba(34, 211, 238, 0.25)'
+          DEFAULT: '#B8F36B',
+          hover: '#A3E635',
+          muted: '#283818',
         },
-        success: '#10B981',
-        warning: '#F59E0B',
-        danger: '#EF4444',
+        txt: {
+          primary: '#F5F5F5',
+          secondary: '#929292',
+          muted: '#5A5A5A',
+        },
+        danger: {
+          DEFAULT: '#F87171',
+          muted: '#3B1818',
+        },
+        warn: {
+          DEFAULT: '#EAB66A',
+          muted: '#3B2D18',
+        },
+        ok: {
+          DEFAULT: '#B8F36B',
+          muted: '#1E2F13',
+        }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace']
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['JetBrains Mono', 'SF Mono', 'Menlo', 'Monaco', 'Courier New', 'monospace']
       },
-      animation: {
-        'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'wave': 'wave 1.2s ease-in-out infinite alternate',
-      },
-      keyframes: {
-        glow: {
-          '0%': { boxShadow: '0 0 15px rgba(124, 92, 252, 0.2)' },
-          '100%': { boxShadow: '0 0 25px rgba(34, 211, 238, 0.4)' },
-        },
-        wave: {
-          '0%': { height: '20%' },
-          '100%': { height: '100%' },
-        }
+      borderRadius: {
+        'xs': '4px',
+        'sm': '6px',
+        DEFAULT: '8px',
+        'md': '8px',
+        'lg': '10px',
+        'xl': '12px',
       }
     },
   },
   plugins: [],
 }
-

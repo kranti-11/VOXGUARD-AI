@@ -4,66 +4,54 @@
 
 @layer base {
   * {
-    border-color: rgba(255, 255, 255, 0.08);
+    border-color: #262626;
   }
   body {
-    background-color: #080B14;
-    color: #F8FAFC;
-    overflow-x: hidden;
+    background-color: #090909;
+    color: #F5F5F5;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-/* Custom scrollbars */
+/* Minimalist dark scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0D1220;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
-  border-radius: 3px;
+  background: #262626;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #383838;
 }
 
-/* Glow effects */
-.glow-primary {
-  box-shadow: 0 0 20px -5px rgba(124, 92, 252, 0.4);
+/* Subtle border transitions */
+.card-subtle {
+  background: #141414;
+  border: 1px solid #262626;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
-.glow-accent {
-  box-shadow: 0 0 20px -5px rgba(34, 211, 238, 0.4);
+.card-subtle:hover {
+  border-color: #383838;
 }
 
-.glow-card {
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+/* Clean audio wave animation */
+@keyframes miniwave {
+  0%, 100% { height: 3px; }
+  50% { height: 12px; }
 }
 
-.glow-card-interactive {
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glow-card-interactive:hover {
-  border-color: rgba(124, 92, 252, 0.35);
-  box-shadow: 0 8px 30px -4px rgba(124, 92, 252, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  transform: translateY(-1px);
-}
-
-/* Audio wave animation */
-@keyframes soundwave {
-  0%, 100% { height: 4px; }
-  50% { height: 18px; }
-}
-
-.wave-bar-1 { animation: soundwave 1s ease-in-out infinite 0.1s; }
-.wave-bar-2 { animation: soundwave 1s ease-in-out infinite 0.25s; }
-.wave-bar-3 { animation: soundwave 1s ease-in-out infinite 0.4s; }
-.wave-bar-4 { animation: soundwave 1s ease-in-out infinite 0.15s; }
-.wave-bar-5 { animation: soundwave 1s ease-in-out infinite 0.3s; }
-
+.wave-1 { animation: miniwave 1s ease-in-out infinite 0.1s; }
+.wave-2 { animation: miniwave 1s ease-in-out infinite 0.25s; }
+.wave-3 { animation: miniwave 1s ease-in-out infinite 0.4s; }
+.wave-4 { animation: miniwave 1s ease-in-out infinite 0.15s; }
